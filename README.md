@@ -1,27 +1,40 @@
-# jekyll-theme-hackcss
+# brume
 
-[Dead simple CSS framework](http://hackcss.com/) now with Jekyll.
+I am not a designer so I cannot impress you with breathtaking Jekyll themes, but brume is something that just came to my mind and I had to build it. It is a clean and simple theme, which has an index page that lists all your blog posts divided by the year, a single post page and a layout for any additional pages you might need.
 
-Mobile-ready, modern, stylish, simple.
+This is how the "Home" page looks like.
 
-## Theme modes
+![Home](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/home.png)
 
-This theme comes in three modes, which could be configured in `_config.yml`.
+And this is a single post.
 
-![Standard](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/standard.png)
+![Post](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_1.png)
 
-![Dark](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/dark.png)
+![Post. More content examples.](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_2.png)
 
-![Markdown](https://raw.githubusercontent.com/wemake-services/jekyll-theme-hackcss/3cbe97b71a56a19eba386dd928e125b71e50c71e/images/markdown.png)
+## Usage
 
-## Installation
+Brume can be installed just like any other Jekyll theme as described [here](https://jekyllrb.com/docs/themes/#installing-a-theme),
+but there are a couple of additional steps you have to take.
 
-Clone this repo. Create your own website. Easy.
+1. All the links are defined in a file *_data/links.yml*, therefore you'll have to create a *_data*
+directory and put this file there in order for navigation to be displayed.
+2. Brume uses `home` layout for the home page (like the default Jekyll theme). All you need to do
+is create an *index.html* or *index.md* file with `layout: home`. If you want the home page to be
+listed in the navigation you have to add `title` to it's front matter that matches
+the title you used for the home page link in the *links.yml* file. Titles are used to indicate
+the current page.
 
-## Configuration
+## Theme customization
 
-See [docs](https://github.com/wemake-services/jekyll-theme-hackcss/blob/master/docs.md).
+This theme has 4 predefined colors that can be used for links:
 
-## License
+- azul
+- ruby
+- amber
+- avocado
 
-GNU PGL 3. See [LICENSE](https://github.com/wemake-services/jekyll-theme-hackcss/blob/3cbe97b71a56a19eba386dd928e125b71e50c71e/LICENSE) for more information.
+By default it uses *avocado*, but if you want to select another one just change the `color_scheme` setting in
+*_config.yml* file.
+
+Express your thoughts about brume on Twitter [@aigarsdz](http://twitter.com/aigarsdz), and help me make it better!
